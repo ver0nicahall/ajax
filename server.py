@@ -23,6 +23,7 @@ WEATHER = {
     '94110': {'forecast': 'Rainy, damp, and rich with hipsters.', 'temp': '60F'},
     '99507': {'forecast': 'Warm, balmy, and good for sunbathing.', 'temp': '100F'},
     '94102': {'forecast': 'Delightful, clever, and full of Python.', 'temp': '55F'},
+    '78754': {'forecast': 'Stormy. hot, may rain cats and dogs.', 'temp': '83F'}
 }
 
 DEFAULT_WEATHER = {'forecast': 'Kind of boring.', 'temp': '68F'}
@@ -58,7 +59,7 @@ def order_melons():
 
     if qty > 10:
         result_code = 'ERROR'
-        result_text = "You can't buy more than 10 melons"
+        result_text = "You can't buy more than 10 melons."
     elif qty > 0:
         result_code = 'OK'
         result_text = f"You have bought {qty} {melon} melons"
