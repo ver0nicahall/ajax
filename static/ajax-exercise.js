@@ -67,3 +67,19 @@ function orderMelons(evt) {
   // TODO: if the result code is ERROR, make it show up in red (see our CSS!)
 }
 document.querySelector('#order-form').addEventListener('submit', orderMelons);
+
+// PART 4: FURTHER STUDY
+function getDogImage(evt) {
+  //prevent default
+  evt.preventDefault();
+
+  fetch('https://dog.ceo/api/breeds/image/random')
+    .then(response => response.json())
+    .then(responseJson => {
+      //populate box with dog image 
+      // console.log('responseJson: ', responseJson);
+      document.querySelector('#dog-image').insertAdjacentHTML('beforeend',`<img src=${responseJson.message} alt="cute dog">`);
+    });
+}
+
+document.querySelector('#get-dog-image').addEventListener('click', getDogImage);
